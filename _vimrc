@@ -38,6 +38,7 @@ autocmd FileType ruby set tabstop=8|set shiftwidth=2|set expandtab
 set nobackup
 "set nowb
 
+"this is a comment
 filetype plugin on
 syntax on 
 colorscheme desert
