@@ -7,7 +7,7 @@ set laststatus=2
 
 "== Set character encoding ==
 set encoding=utf-8
-set guifontwide=MS_Gothic:h9,NSimSun:h9
+set guifontwide=NSimSun
 
 "== Set line num, buffer, search, highlight, autoindent ==
 set nu

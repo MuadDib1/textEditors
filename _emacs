@@ -11,11 +11,18 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(blink-cursor-mode nil)
- '(custom-enabled-themes (quote (tango-dark)))
+ '(custom-enabled-themes (quote (zenburn)))
+ '(custom-safe-themes
+   (quote
+    ("84890723510d225c45aaff941a7e201606a48b973f0121cb9bcb0b9399be8cba" "bfdcbf0d33f3376a956707e746d10f3ef2d8d9caa1c214361c9c08f00a1c8409" default)))
  '(package-archives
    (quote
     (("gnu" . "http://elpa.gnu.org/packages/")
      ("melpa" . "https://stable.melpa.org/packages/"))))
+ '(package-selected-packages
+   (quote
+    (neotree typescript-mode php-mode zenburn-theme slime exec-path-from-shell atom-one-dark-theme)))
+ '(server-mode t)
  '(tool-bar-mode nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -23,3 +30,15 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:inherit nil :stipple nil :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 140 :width normal :foundry "nil" :family "Menlo")))))
+
+;; load exec-path-from-shell
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
+;; Set lisp system
+(setq inferior-lisp-program "/usr/local/bin/clisp")
+
+;; bind set-mark-command
+(global-set-key (kbd "C-M-z") 'set-mark-command)
+
+;; end of init
