@@ -41,4 +41,7 @@
 ;; bind set-mark-command
 (global-set-key (kbd "C-M-z") 'set-mark-command)
 
+;; save backup files in one place
+(setq backup-directory-alist `(("." . "~/.emacs.d/emacs.bak")))
+
 ;; end of init
